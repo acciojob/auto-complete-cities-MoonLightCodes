@@ -1,1 +1,10 @@
 
+.item{
+    background-color: rgba(56, 212, 56, 0.637);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.item:hover{
+    background: green;
+}
