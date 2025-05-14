@@ -26,13 +26,13 @@ const App = () => {
         <input type="text" value={input} onChange={(e)=>{
           setInput(e.target.value);
           setSuggestionsOff(false);
-        }} placeholder="Enter a city name"/>
-        <div style={{overflowY:"scroll",maxHeight:"30vh"}}>
-          {input!==''&&!suggestionsOff&&allCitiesInIndia.filter((ele)=>ele.toLowerCase().includes(input.toLowerCase())).map((ele)=><h3 className="item" onClick={()=>{
+        }} placeholder="Enter a city name"/> 
+        <ul style={{overflowY:"scroll",maxHeight:"30vh"}}>
+          {input!==''&&!suggestionsOff&&allCitiesInIndia.filter((ele)=>ele.toLowerCase().includes(input.toLowerCase())).map((ele)=><li className="item" onClick={()=>{
             setInput(ele);
             setSuggestionsOff(true);
-          }}>{ele}</h3>)}
-        </div>
+          }}>{ele}</li>)}
+        </ul>
       </div>
     </div>
   )
